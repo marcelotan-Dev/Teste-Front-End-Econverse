@@ -1,0 +1,135 @@
+
+@use "../../styles/variaveis" as *;
+
+.header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  &__benefits {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+    font-size: 11px;
+    color: #777;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__main {
+    max-width: 1280px;
+    margin: auto;
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: #241b49;
+    text-decoration: none;
+    letter-spacing: -1px;
+    white-space: nowrap;
+  }
+
+  &__logo-circle {
+    background: $secondary-color;
+    border-radius: 50%;
+    padding: 8px 2px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    flex: 1;
+    background: #f6f6f6;
+    border-radius: 8px;
+    overflow: hidden;
+
+    input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      padding: 14px;
+      background: transparent;
+      font-size: 13px;
+    }
+
+    button {
+      border: 0;
+      background: transparent;
+      padding: 12px 18px;
+      font-size: 24px;
+      color: #777;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 18px;
+
+    button {
+      border: 0;
+      background: transparent;
+      color: #777;
+      font-size: 24px;
+    }
+  }
+
+  &__nav {
+    max-width: 1280px;
+    margin: auto;
+    padding: 14px 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    border-top: 1px solid #eee;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #666;
+      font-size: 11px;
+      font-weight: 600;
+    }
+  }
+
+  &__highlight {
+    color: $primary-color !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__benefits {
+      gap: 12px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    &__main {
+      padding: 16px;
+      flex-wrap: wrap;
+    }
+
+    &__search {
+      order: 3;
+      flex-basis: 100%;
+      max-width: none;
+    }
+
+    &__actions {
+      gap: 12px;
+    }
+
+    &__nav {
+      overflow-x: auto;
+      white-space: nowrap;
+      justify-content: flex-start;
+    }
+  }
+}

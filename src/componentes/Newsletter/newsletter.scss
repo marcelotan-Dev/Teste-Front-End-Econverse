@@ -1,0 +1,110 @@
+.newsletter {
+  width: 100%;
+  padding: 35px 20px;
+  background: #271b49;
+  color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__texto {
+    max-width: 440px;
+
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  }
+
+  &__formulario {
+    flex: 1;
+    max-width: 650px;
+  }
+
+  &__campos {
+    display: flex;
+    gap: 10px;
+
+    input {
+      width: 100%;
+      min-width: 0;
+      padding: 14px;
+      border: none;
+      border-radius: 5px;
+      font-size: 13px;
+      outline-offset: 3px;
+    }
+
+    button {
+      min-width: 140px;
+      border: none;
+      border-radius: 5px;
+      padding: 14px 18px;
+      background: #ffcc00;
+      color: #222;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        background: #e8b900;
+      }
+    }
+  }
+
+  &__termos {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+
+    input {
+      accent-color: #3442b5;
+    }
+  }
+
+  &__mensagem {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .newsletter {
+    &__container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__formulario {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter {
+    &__campos {
+      flex-direction: column;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
