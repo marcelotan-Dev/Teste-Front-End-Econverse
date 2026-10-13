@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      /* Cabeçalho */
+    
       <Header />
 
       <main>
